@@ -1,27 +1,33 @@
 // DO NOT DELETE
 
 import './App.css'
-// ↓書き換えた
+import { useState } from 'react'  
+// ↓遊ぶために書き換えた
 // import React from 'react'
-import Counter from './components/Counter.jsx'
-import InputForm from './components/InputForm.jsx';
+// import Counter from './components/Counter.jsx'
+// import InputForm from './components/InputForm.jsx';
+// ↑遊ぶために書き換えた
 
 /**
  * @type {() => JSX.Element}
  */
 export const App = () => {
-  return (
-    // <>
-    //   <header>Dogアプリ</header>
-    //   <p>犬の画像を表示するサイトです</p>
-    //   <img src="https://images.dog.ceo/breeds/bulldog-boston/n02096585_6028.jpg" alt="Dog" />
-    // </>
+  const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/bulldog-boston/n02096585_6028.jpg');
 
-    // ↓実験
-    <div>
-      <Counter />
-      <InputForm />
-    </div>
+  return (
+    <>
+      <header>
+        <h1>Dogアプリ</h1>
+      </header>
+      <p>犬の画像を表示するサイトです</p>
+      <img src={dogUrl} alt="image of dog" />
+    </>
+
+    // // ↓実験
+    // <div>
+    //   <Counter />
+    //   <InputForm />
+    // </div>
   )
 }
 
