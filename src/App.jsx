@@ -14,6 +14,14 @@ import { useState } from 'react'
 export const App = () => {
   const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/bulldog-boston/n02096585_6028.jpg');
 
+  const updateDogImage = async ()=>{
+    const response = await fetch("https://dog.ceo/api/breeds/image/random");
+    const data = await response.json();
+
+    // console.log(data);
+    setDogUrl(data.message);
+  }
+
   return (
     <>
       <header>
@@ -21,6 +29,7 @@ export const App = () => {
       </header>
       <p>犬の画像を表示するサイトです</p>
       <img src={dogUrl} alt="image of dog" />
+      <button onClick={updateDogImage}>更新</button>
     </>
 
     // // ↓実験
