@@ -24,12 +24,16 @@ export const App = () => {
 
   return (
     <>
-      <header>
-        <h1>Dogアプリ</h1>
-      </header>
-      <p>犬の画像を表示するサイトです</p>
-      <img src={dogUrl} alt="image of dog" />
-      <button onClick={updateDogImage}>更新</button>
+      <div>
+        <header className="header">
+          <h1>Dogアプリ</h1>
+        </header>
+        <p className="description">犬の画像を表示するサイトです</p>
+      </div>
+      <img className="dog-image" src={dogUrl} alt="image of dog" />
+      <div class="container">
+        <button className="button" onClick={updateDogImage}>更新</button>
+      </div>
     </>
 
     // // ↓実験
