@@ -10,6 +10,10 @@ import { useState } from 'react'
 // ↑遊ぶために書き換えた
 import Header from './Header.jsx'
 import Description from './Description'
+import {DogListContainer} from './DogListContainer'
+
+console.log(DogListContainer); 
+// console.log("DogListContainer:", DogListContainer);
 
 /**
  * @type {() => JSX.Element}
@@ -31,6 +35,7 @@ export const App = () => {
     <div>
       <Header />
       <Description dogUrl={dogUrl} updateDogImage={updateDogImage} />
+      <DogListContainer />
     </div>
   )
 }

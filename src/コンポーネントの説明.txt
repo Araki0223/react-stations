@@ -1,0 +1,35 @@
+各ファイルの役割
+1. App.jsx（アプリのメインコンポーネント）
+	•	アプリ全体の構造を決める。
+	•	Header と Description を呼び出す。
+
+2. Header.jsx（ヘッダー部分）
+	•	サイトのタイトルを表示する。
+
+3. Description.jsx（説明・犬の画像の更新）
+	•	説明文を表示。
+	•	DogImage や BreedsSelect を使って犬の画像を表示＆更新する。
+
+4. DogImage.jsx（犬の画像を表示するコンポーネント）
+	•	Description.jsx から受け取った url を表示する。
+
+5. BreedsSelect.jsx（犬の品種を選択する）
+	•	犬の品種リストを取得し、ユーザーが選択できるようにする。
+
+6. DogListContainer.jsx（複数の犬画像を管理する）
+	•	いくつかの犬の画像を一覧で表示する。
+
+7. index.jsx（エントリーポイント）
+	•	App.jsx を root に描画する。
+
+8. App.css（スタイルシート）
+	•	アプリのデザインを定義する。
+
+
+まとめ
+
+コンポーネントの関係
+	•	App.jsx が全体を管理し、Header.jsx と Description.jsx を組み込んでいる。
+	•	Description.jsx が犬の画像の表示と更新を管理し、その中で DogImage.jsx や BreedsSelect.jsx を使っている。
+	•	DogListContainer.jsx は複数の犬の画像を管理し、DogImage.jsx を利用。
+	•	index.jsx はエントリーポイントで App.jsx を描画する。
